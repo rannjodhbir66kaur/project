@@ -1,25 +1,35 @@
 <html>
-
 <body>
 <form name=f1 action="test1.html" method="get" onclick="dothis()">
-first name<input type="text" id=i1 name="firstname"><br>
-last name<input type="text" id=i2 name="lastname"><br>
+Firstname<input type="text" id=i1 name="firstname" required><br>
+Lastname<input type="text" id=i2 name="lastname" required><br>
 Choose any one of the methods<br>
-<input type=radio name=method id="localstorage">LocalStorage<br>
-<input type=radio name=method id="queryString">queryString<br>
+<input type=radio name=method id="localstorage" value="localstorage" required>LocalStorage<br>
+<input type=radio name=method id="queryString" value="queryString" required>queryString<br>
 <br>
 <input type=submit value="submit">
 </form>
+
 <script>
 function dothis()
 {
+
 name1=document.getElementById("i1").value;
 name2=document.getElementById("i2").value;
+name3=document.getElementById("localstorage").value;
+
 
 localStorage.firstname=name1;
 localStorage.lastname=name2;
+localStorage.methodtype=name3;
+
+
 
 }
 </script>
+
+
+
+
 </body>
 </html>

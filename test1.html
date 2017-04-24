@@ -4,12 +4,21 @@
 <script>
 
 
-document.write("Welcome"+ " "+localStorage.getItem("firstname")+" "+localStorage.getItem("lastname")+"<br>");
-
-
-
 var urlParams = new URLSearchParams(window.location.search);
-document.write("Welcome"+" "+urlParams.get('firstname')+" "+urlParams.get('lastname'));
+
+
+if(urlParams.get('method') == "queryString")
+{
+document.write("Welcome"+" "+urlParams.get('firstname')+" "+urlParams.get('lastname')+" " +"<br>"+"Method="+" "+ urlParams.get('method'));
+}
+
+
+if(urlParams.get('method') == "localstorage")
+{
+document.write("Welcome"+ " "+localStorage.getItem("firstname")+" "+localStorage.getItem("lastname")+"<br>"+"Method="+" "+localStorage.getItem("methodtype")+"<br>");
+}
+
+
 
 </script>
 
