@@ -1,0 +1,45 @@
+<html>
+
+<body>
+<form name=f1 action="test1.html" method="get" onclick="dothis()">
+first name<input type="text" id=i1 name="firstname"><br>
+last name<input type="text" id=i2 name="lastname"><br>
+
+
+Choose any one of the methods<br>
+<input type=radio name=method id="localstorage">LocalStorage<br>
+<input type=radio name=method id="queryString">queryString<br>
+<input type=radio name=method id="Cookies">Cookies<br>
+<input type=submit value="submit">
+</form>
+<script>
+function dothis()
+{
+name1=document.getElementById("i1").value;
+name2=document.getElementById("i2").value;
+
+
+
+
+localStorage.firstname=name1;
+localStorage.lastname=name2;
+
+
+	
+        /*if (method[0].checked)  
+             {
+		localStorage.firstname=name1;
+                localStorage.lastname=name2;	 
+             } 
+         if else(method[1].cheked) 
+             {
+        	window.location.href="test1.html"
+	     }*/
+    
+
+//document.cookie="firstname="+name1+ ";path=\test1.html";
+
+}
+</script>
+</body>
+</html>
